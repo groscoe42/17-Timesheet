@@ -6,29 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style.css">
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="title">
-            <h1>Directory of Employee Billable Hours</h1>
-        </div>
-        <div class="table">
-            <table>
+    <div class="title">
+        <h1>Directory of Employee Billable Hours</h1>
+    </div>
+    <div class="table">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <th colspan=6>Current Employees</th>
+                    <th>Current Employees</th>
                 </tr>
                 <tr>
-                    <th>Employee Name</th>
-                    <th>Position</th>
-                    <th>Start Date</th>
-                    <th>Total Time</th>
-                    <th>Pay Rate</th>
-                    <th>Total Pay</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">Total Time</th>
+                    <th scope="col">Pay Rate</th>
+                    <th scope="col">Total Pay</th>
                 </tr>
+            </thead>
+            <tbody>
+
                 <tr id="newItem">
                     <td id="name"></td>
                     <td id="position"></td>
@@ -37,35 +48,34 @@
                     <td id="rate"></td>
                     <td id="tPay"></td>
                 </tr>
-            </table>
-        </div>
+
+
+            </tbody>
+        </table>
     </div>
 
+    <div class="card">
 
-    <div class="container">
-
-        <div class="card">
-
-            <div class="card-body">
-                <h5 class="card-title">Add Employee</h5>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Employee Name</label>
-                    <input type="password" class="form-control" id="Name" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Role</label>
-                    <input type="password" class="form-control" id="Role" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Start Date (DD/MM/YYY)</label>
-                    <input type="password" class="form-control" id="Date" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Monthly Rate</label>
-                    <input type="password" class="form-control" id="Rate" placeholder="Password">
-                </div>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card-body">
+            <h5 class="card-title">Add Employee</h5>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Employee Name</label>
+                <input type="password" class="form-control" id="Name" placeholder="Password">
             </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Role</label>
+                <input type="password" class="form-control" id="Role" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Start Date (DD/MM/YYY)</label>
+                <input type="password" class="form-control" id="Date" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Monthly Rate</label>
+                <input type="password" class="form-control" id="Rate" placeholder="Password">
+            </div>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+
         </div>
     </div>
 </body>
